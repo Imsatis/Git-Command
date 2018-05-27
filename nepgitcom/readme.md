@@ -1,3 +1,3 @@
-Git Cheat Sheet - Git-Flow [![Awesome](https://github.com/Imsatis/GIt-Command/tree/master/nepgitcom)](https://github.com/sindresorhus/awesome)
+Git Cheat Sheet - Git-Flow [![SatiS](https://github.com/Imsatis/GIt-Command)](https://github.com/sindresorhus/awesome)
 ===============
 <hr>
