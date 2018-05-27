@@ -35,6 +35,7 @@ Git Cheat Sheet Nepalese
 * [Git प्रवाह](#Git-प्रवाह)
 
 <hr>
+
 ###सेटअप                                                                  गर्न
  को लागी
 
@@ -80,6 +81,7 @@ git config --global core.editor vi
 ```
 
 <hr>
+
 ##कन्फिगरेसन फाइलहरू
 
 #####भण्डार विशिष्ट कन्फिगरेसन फाइल [--local]:
@@ -98,6 +100,7 @@ git config --global core.editor vi
 ```
 
 <hr>
+
 ##सिर्जना 
 
 #####अवस्थित भण्डार क्लोन गर्न:
