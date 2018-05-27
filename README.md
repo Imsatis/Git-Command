@@ -2,14 +2,16 @@
 ######Basic Commands of Git
 <HR>
 <html>
-
+#setup
 
 <font color="white" face="Lucida Handwriting">
 <h1 align="center">BASIC CODES OF GIT BASH </h1>
 </font>
 
 <HR>
-<p>1:) git init #To intiliaze the the Local Repo.</p> 
+
+[To intiliaze the the Local Repo](#To intiliaze the the Local Repo)
+<p>1:) git init  .</p> 
 
 <p>2:) git status #use to check the status of the current Branch.</p>
 
