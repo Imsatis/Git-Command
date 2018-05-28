@@ -392,58 +392,69 @@ $ git remote pull <remote> <url>
 $ git pull origin master
 ```
 
-#####Get all changes from HEAD to local repository without a merge:
+#####मर्ज बिना स्थानीय भण्डारमा सबै परिवर्तनहरू प्राप्त गर्नुहोस्:
+
 ```
 git pull --rebase <remote> <branch>
 ```
 
-#####Publish local changes on a remote:
+#####रिमोटमा स्थानीय परिवर्तनहरू प्रकाशित गर्नुहोस्:
+
 ```
 $ git push remote <remote> <branch>
 ```
 
-#####Delete a branch on the remote:
+#####रिमोटमा एक शाखा मेटाउनुहोस्:
+
 ```
 $ git push <remote> :<branch> (since Git v1.5.0)
 or
 git push <remote> --delete <branch> (since Git v1.7.0)
 ```
 
-#####Publish your tags:
+#####तपाईंको ट्याग प्रकाशित गर्नुहोस्:
+
 ```
 $ git push --tags
 ```
 <hr>
-##Merge & Rebase
 
-#####Merge <branch> into your current HEAD:
+[##मर्ज र विस्थापन](##मर्ज-र-विस्थापन ) 
+
+
+#####तपाईंको वर्तमान HEAD मा <branch> मर्ज गर्नुहोस्:
+
 ```
 $ git merge <branch>
 ```
 
-#####Rebase your current HEAD onto &lt;branch&gt;:<br>
-<em><sub>Don't rebase published commit!</sub></em>
+#####तपाईंको वर्तमान HEAD लाई & lt; शाखामा & gt;:<br>
+<em><sub>प्रकाशित प्रतिबद्धता रद्द नगर्नुहोस्!</sub></em>
 
 ```
 $ git rebase <branch>
 ```
 
-#####Abort a rebase:
+#####पुनर्स्थापना रद्द गर्नुहोस्:
+
 ```
 $ git rebase --abort
 ```
 
-#####Continue a rebase after resolving conflicts:
+#####संघर्ष समाधान पछि एक बिदा जारी राख्नुहोस्:
+
 ```
 $ git rebase --continue
 ```
 
-#####Use your configured merge tool to solve conflicts:
+#####संघर्षहरू समाधान गर्न तपाईंको कन्फिगर गरिएको मर्ज उपकरण प्रयोग गर्नुहोस्:
+
 ```
 $ git mergetool
 ```
 
-#####Use your editor to manually solve conflicts and (after resolving) mark file as resolved:
+#####म्यानुअल रूपमा विवाद समाधान गर्न तपाईंको सम्पादक प्रयोग गर्नुहोस् र (समाधान पछि) फाइलको रूपमा समाधानको रूपमा चिन्ह लगाउनुहोस्:
+
 ```
 $ git add <resolved-file>
 ```
@@ -452,12 +463,14 @@ $ git add <resolved-file>
 $ git rm <resolved-file>
 ```
 
-#####Squashing commits:
+#####स्क्वैशिंग काम गर्दछ:
+
 ```
 $ git rebase -i <commit-just-before-first>
 ```
 
-Now replace this,
+अब यो बदल्नुहोस्,
+
 
 ```
 pick <commit_id>
@@ -465,7 +478,7 @@ pick <commit_id2>
 pick <commit_id3>
 ```
 
-to this,
+यो गर्न,
 
 ```
 pick <commit_id>
@@ -473,49 +486,60 @@ squash <commit_id2>
 squash <commit_id3>
 ```
 <hr>
-##Undo
 
-#####Discard all local changes in your working directory:
+[##पूर्ववत](##पूर्ववत)
+
+
+#####तपाईंको काम गर्ने डाइरेक्टरीमा सबै स्थानीय परिवर्तनहरू खारेज गर्नुहोस्:
+
 ```
 $ git reset --hard HEAD
 ```
 
-#####Get all the files out of the staging area(i.e. undo the last `git add`):
+#####टाढाको क्षेत्रबाट सबै फाईलहरू पाउनुहोस् (जसमा अन्तिम `git थप` अन्डु गर्नुहोस्):
+
 ```
 $ git reset HEAD
 ```
 
-#####Discard local changes in a specific file:
+#####विशिष्ट फाइलमा स्थानीय परिवर्तनहरू खारेज गर्नुहोस्:
+
 ```
 $ git checkout HEAD <file>
 ```
 
-#####Revert a commit (by producing a new commit with contrary changes):
+#####एक प्रतिबद्धता उल्टाउनुहोस् (विपरीत परिवर्तनको साथ नयाँ प्रतिबद्धता उत्पादन गरेर):
+
 ```
 $ git revert <commit>
 ```
 
-#####Reset your HEAD pointer to a previous commit and discard all changes since then:
+#####तपाईंको HEAD सूचकलाई अघिल्लो प्रतिबद्धतामा रिसेट गर्नुहोस् र त्यसपछि सबै परिवर्तनहरू त्याग्नुहोस्:
+
 ```
 $ git reset --hard <commit>
 ```
 
-#####Reset your HEAD pointer to a remote branch current state.
+#####तपाईंको HEAD सूचक रिमोट शाखा हालको अवस्थामा रिसेट गर्नुहोस्।
+
 ```
 git reset --hard <remote/branch> e.g., upstream/master, origin/my-feature
 ```
 
-#####Reset your HEAD pointer to a previous commit and preserve all changes as unstaged changes:
+#####आफ्नो HEAD सूचकलाई अघिल्लो प्रतिबद्धतामा रिसेट गर्नुहोस् र अपस्टरेटेड परिवर्तनको रूपमा सबै परिवर्तनहरू सुरक्षित गर्नुहोस्:
+
 ```
 $ git reset <commit>
 ```
 
-#####Reset your HEAD pointer to a previous commit and preserve uncommitted local changes:
+#####तपाईंको HEAD सूचकलाई अघिल्लो प्रतिबद्धतामा रिसेट गर्नुहोस् र असामान्य स्थानीय परिवर्तनहरू सुरक्षित गर्नुहोस्:
+
 ```
 $ git reset --keep <commit>
 ```
 
-#####Remove files that were accidentally committed before they were added to .gitignore
+#####फाइलहरू हटाउनुहोस् जुन ग्यारेन्टीमा प्रतिबद्ध हुनुभन्दा पहिले गितग्रेन्डमा थपियो
+
 ```
 $ git rm -r --cached .
 $ git add .
@@ -523,143 +547,163 @@ $ git commit -m "remove xyz file"
 ```
 <hr>
 
-##Git-Flow
+[##Git-Flow](#Git-Flow)
 
-###Index
-* [Setup](#setup)
-* [Getting Started](#getting-started)
-* [Features](#features)
-* [Make a Release](#make-a-release)
-* [Hotfixes](#hotfixes)
-* [Commands](#commands)
+###अनुक्रमणिका
+
+* [सेटअप](#सेटअप)
+* [सुरु गर्दै](#सुरु-गर्दै)
+* [विशेषताहरु](#विशेषताहरु)
+* [रिलीज बनाउनुहोस्](#रिलीज-बनाउनुहोस्)
+* [हटफिक्सहरू](#हटफिक्सहरू)
+* [आदेशहरू](#आदेशहरू)
 <hr>
 
 
-###Setup
-######You need a working git installation as prerequisite. Git flow works on OSX, Linux and Windows.
+###सेटअप
 
-#####OSX Homebrew:
+######तपाईंलाई आवश्यकताको रूपमा काम गरिरहेको गिट स्थापनाको आवश्यकता छ। ओएसएक्स, लिनक्स र विन्डोजमा Git प्रवाह कार्य गर्दछ।
+
+
+#####ओएसएक्स होमब्रिज:
+
 ```
 $ brew install git-flow
 ```
 
-#####OSX Macports:
+#####ओएसएक्स म्याकपोर्टहरू:
+
 ```
 $ port install git-flow
 ```
 
-#####Linux (Debian-based):
+#####लिनक्स (डेबियन आधारित):
+
 ```
 $ apt-get install git-flow
 ```
 
-#####Windows (Cygwin):
-######You need wget and util-linux to install git-flow.
+#####विन्डोज (Cygwin):
+######तपाईलाई विजिट आवश्यक छ र git-flow स्थापना गर्न लिनक्सको प्रयोग प्रयोग गर्नुहोस्।
+
 ```
 $ wget -q -O - --no-check-certificate https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash
 ```
 <hr>
 
 
-###Getting Started
-######Git flow needs to be initialized in order to customize your project setup. Start using git-flow by initializing it inside an existing git repository:
-#####Initialize:
-######You'll have to answer a few questions regarding the naming conventions for your branches. It's recommended to use the default values.
+###सुरु गर्दै
+
+######तपाईंको परियोजना सेटअप अनुकूलन गर्न Git को प्रवाह प्रारम्भ गर्न आवश्यक छ। अवस्थित गित भण्डार भित्रको प्रारम्भ गरेर गित-प्रवाह प्रयोग गरेर सुरु गर्नुहोस्:
+
+#####सुरू गर्नुहोस्:
+
+######तपाइँका शाखाहरूका लागि नामकरण अधिवेशनको बारेमा केहि प्रश्नहरूको जवाफ दिनुपर्नेछ। यसलाई डिफल्ट मानहरू प्रयोग गर्न सिफारिस गरिएको छ।
+
 ```
 git flow init
 ```
 <hr>
 
 
-###Features
-######Develop new features for upcoming releases. Typically exist in developers repos only.
-#####Start a new feature:
-######This action creates a new feature branch based on 'develop' and switches to it.
+###विशेषताहरु
+######आगामी रिलीजहरूको लागि नयाँ सुविधाहरू विकास गर्नुहोस्। विकासकर्ताहरूमा सामान्य रूपमा मात्र अवस्थित हुन्छ।
+
+#####नयाँ सुविधा सुरू गर्नुहोस्:
+######यो कार्यले 'विकास' मा आधारित नयाँ विशेषता शाखा सिर्जना गर्छ र यसलाई स्विच गर्दछ।
 ```
 git flow feature start MYFEATURE
 ```
 
-#####Finish up a feature:
-######Finish the development of a feature. This action performs the following:
-######1)Merged MYFEATURE into 'develop'.
-######2)Removes the feature branch.
-######3)Switches back to 'develop' branch
+#####एक सुविधा समाप्त गर्नुहोस्:
+######एक सुविधाको विकास समाप्त गर्नुहोस्। यो कार्यले निम्न कार्य गर्दछ:
+######1) MYFEATURE लाई 'develop' मा मर्ज गरियो। 
+######2) सुविधा शाखा हटाउँछ।
+######3) फिर्ता 'विकास' शाखामा स्विच गर्दछ
 ```
 git flow feature finish MYFEATURE
 ```
 
-#####Publish a feature:
-######Are you developing a feature in collaboration? Publish a feature to the remote server so it can be used by other users.
+#####एउटा सुविधा प्रकाशित गर्नुहोस्:
+######के तपाईं सहयोगमा एक सुविधा विकास गर्दै हुनुहुन्छ? टाढाको सर्भरमा एक सुविधा प्रकाशित गर्नुहोस् त्यसैले यो अन्य प्रयोगकर्ताहरूद्वारा प्रयोग गर्न सकिन्छ।
 ```
 git flow feature publish MYFEATURE
 ```
 
-#####Getting a published feature:
-######Get a feature published by another user.
+#####एक प्रकाशित फिचर प्राप्त गर्दै:
+######अर्को प्रयोगकर्ता द्वारा प्रकाशित एक सुविधा प्राप्त गर्नुहोस्।
+
 ```
 git flow feature pull origin MYFEATURE
 ```
 
-#####Tracking a origin feature:
-######You can track a feature on origin by using
+#####मूल विशेषता ट्र्याक गर्दै:
+######तपाईंले मूलमा एउटा सुविधा ट्रयाक गर्न सक्नुहुन्छ
+
 ```
 git flow feature track MYFEATURE
 ```
 <hr>
 
 
-###Make a Release
-######Support preparation of a new production release. Allow for minor bug fixes and preparing meta-data for a release
+###रिलीज बनाउनुहोस्
+######नयाँ उत्पादन रिलीज को समर्थन को तैयारी। सानो बग समाधानका लागि अनुमति दिनुहोस् र रिलीजको लागि मेटा-डेटा तयार पार्नुहोस्
 
-#####Start a release:
-######To start a release, use the git flow release command. It creates a release branch created from the 'develop' branch. You can optionally supply a [BASE] commit sha-1 hash to start the release from. The commit must be on the 'develop' branch.
+#####रिलीज सुरू गर्नुहोस्:
+######रिलीज सुरू गर्न, गित प्रवाह रिलीज आदेश प्रयोग गर्नुहोस्। यसले 'develop' शाखाबाट निर्मित रिलीज शाखा बनाउँछ। तपाईले वैकल्पिक रुपमा [BASE] को शिल-1 हैशलाई रिलीज गर्न सुरू गर्न सक्नुहुनेछ। प्रतिबद्धहरू 'develop' शाखामा हुनुपर्दछ।
+
 ```
 git flow release start RELEASE [BASE]
 ```
-######It's wise to publish the release branch after creating it to allow release commits by other developers. Do it similar to feature publishing with the command:
+######रिलीज शाखा प्रकाशित गर्न पछि यो अन्य विकासकर्ताद्वारा प्रतिबद्ध अनुमति दिन को लागी बुद्धिमानी हो। आदेशसँग प्रकाशन गर्ने सुविधासँग समान गर्नुहोस्:
+
 ```
 git flow release publish RELEASE
 ```
-######(You can track a remote release with the: ```git flow release track RELEASE``` command)
+######(तपाईं रिमोट रिलीज ट्रयाक गर्न सक्नुहुन्छ: ```git प्रवाह रिलीज ट्रयाक RELEASE``` कमांड)
 
-#####Finish up a release:
-######Finishing a release is one of the big steps in git branching. It performs several actions:
-######1)Merges the release branch back into 'master'
-######2)Tags the release with its name
-######3)Back-merges the release into 'develop'
-######4)Removes the release branch
+#####रिलीज समाप्त गर्नुहोस्:
+######रिलीज समाप्त गर्दै गित शाखामा ठूलो चरणहरू मध्ये एक हो। यसले धेरै कार्यहरू गर्दछ:
+######1) रिलीज शाखा फिर्ता 'mmaster' मा मर्ज गर्दछ
+######2) यसको नाममा रिलीज ट्याग गर्नुहोस्
+######3) फिर्ता 'मा विकास' मा मर्ज गर्दछ
+######4) जारी शाखा हटाउँछ
+
 ```
 git flow release finish RELEASE
 ```
-######Don't forget to push your tags with ```git push --tags```
+######आफ्नो ट्याग ```git push --tags``` सँग  नबिर्सन
 <hr>
 
 
 ###Hotfixes
-######Hotfixes arise from the necessity to act immediately upon an undesired state of a live production version. May be branched off from the corresponding tag on the master branch that marks the production version.
+######हटफिक्सहरू प्रत्यक्ष उत्पादन संस्करणको अनावश्यक अवस्थामा तुरुन्तै कार्य गर्न आवश्यक हुन्छ। मास्टर शाखामा सम्बन्धित ट्यागबाट उत्पादन हुने संस्करणलाई चिन्ह लगाउन सकिन्छ।
 
-#####Git flow hotfix start:
-######Like the other git flow commands, a hotfix is started with
+#####Git प्रवाह हटफिक्स सुरु:
+######अन्य गिट प्रवाह आदेशहरू जस्तै, हटफिक्स सुरु भएको छ
+
 ```
 $ git flow hotfix start VERSION [BASENAME]
 ```
-######The version argument hereby marks the new hotfix release name. Optionally you can specify a basename to start from.
+######यस संस्करणको आर्गुमेन्टले नयाँ हटफिक्स रिलीज नामलाई चिन्ह लगाउँदछ। वैकल्पिक रूपमा तपाइँबाट सुरु गर्न बेसेनम निर्दिष्ट गर्न सक्नुहुन्छ।
 
-#####Finish a hotfix:
-######By finishing a hotfix it gets merged back into develop and master. Additionally the master merge is tagged with the hotfix version
+#####हटफिक्स समाप्त गर्नुहोस्:
+######हटफिक्स पूर्ण गरेर यसलाई यसलाई विकास र मास्टरमा मर्ज गरिएको हुन्छ। थप रूपमा मास्टर मर्ज हॉटफिक्स संस्करणको साथ ट्याग गरिएको छ
+
 ```
 git flow hotfix finish VERSION
 ```
 <hr>
 
 
-###Commands
+###आदेशहरू
+
 <p align="center">
     <img alt="Git" src="../Img/git-flow-commands.png" height="270" width="460">
 </p>
 <hr>
 
-###Git flow schema
+###Git प्रवाह स्किमा
 
 <p align="center">
     <img alt="Git" src="../Img/git-flow-commands-without-flow.png">
