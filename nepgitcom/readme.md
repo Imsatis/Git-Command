@@ -19,7 +19,7 @@ Git cheat sheet saves you from learning all the commands by heart.
 Be free to contribute, update the grammar mistakes. You are also free to add your language file.
 <hr>
 
-Git Cheat Sheet Nepalese (font Color="blue")=====N P (/font)
+Git Cheat Sheet Nepalese <font Color="blue" size="5px">N P </font>
 ===============
 ###अनुक्रमणिका
 * [सेटअप](#सेटअप-)
