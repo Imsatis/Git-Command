@@ -12,7 +12,6 @@ Git Cheat Sheet - Git-Flow [![Awesome](https://cdn.rawgit.com/sindresorhus/aweso
 3. [Hindi Git Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-hi.md)
 4. [Turkish Git Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-tr.md)
 5. [Spanish Git Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-es.md)
-6. [Nepalese Git Cheat Sheet](empty)
 
 Git cheat sheet saves you from learning all the commands by heart.
 
@@ -624,9 +623,10 @@ git flow feature start MYFEATURE
 #### एक सुविधा समाप्त गर्नुहोस्:
 
 एक सुविधाको विकास समाप्त गर्नुहोस्। यो कार्यले निम्न कार्य गर्दछ:
-1) MYFEATURE लाई 'develop' मा मर्ज गरियो। 
-2) सुविधा शाखा हटाउँछ।
-3) फिर्ता 'विकास' शाखामा स्विच गर्दछ
+1. MYFEATURE लाई 'develop' मा मर्ज गरियो। 
+2. सुविधा शाखा हटाउँछ।
+3. फिर्ता 'विकास' शाखामा स्विच गर्दछ
+
 ```
 git flow feature finish MYFEATURE
 ```
@@ -678,10 +678,10 @@ git flow release publish RELEASE
 ##### रिलीज समाप्त गर्नुहोस्:
 
 रिलीज समाप्त गर्दै गित शाखामा ठूलो चरणहरू मध्ये एक हो। यसले धेरै कार्यहरू गर्दछ:
-1) रिलीज शाखा फिर्ता 'mmaster' मा मर्ज गर्दछ
-2) यसको नाममा रिलीज ट्याग गर्नुहोस्
-3) फिर्ता 'मा विकास' मा मर्ज गर्दछ
-4) जारी शाखा हटाउँछ
+1. रिलीज शाखा फिर्ता 'mmaster' मा मर्ज गर्दछ
+2. यसको नाममा रिलीज ट्याग गर्नुहोस्
+3. फिर्ता 'मा विकास' मा मर्ज गर्दछ
+4. जारी शाखा हटाउँछ
 
 ```
 git flow release finish RELEASE
