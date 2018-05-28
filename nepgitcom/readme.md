@@ -20,7 +20,7 @@ Be free to contribute, update the grammar mistakes. You are also free to add you
 <hr>
 
 Git Cheat Sheet Nepalese [N P](#N-P) <img src="https://github.com/Imsatis/GIt-Command/blob/master/nepgitcom/Flag-logo.svg"
-height="60" width="50">
+height="45" width="55">
 ===============
 ###अनुक्रमणिका
 * [सेटअप](#सेटअप-)
