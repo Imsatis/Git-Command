@@ -717,14 +717,14 @@ git flow hotfix finish VERSION
 ### आदेशहरू
 
 <p align="center">
-    <img alt="Git" src="../Img/git-flow-commands.png" height="270" width="460">
+    <img alt="Git" src="https://github.com/flyhigher139/Git-Cheat-Sheet/blob/master/Img/git-flow-commands.png" height="270" width="460">
 </p>
 <hr>
 
 ### Git प्रवाह स्किमा
 
 <p align="center">
-    <img alt="Git" src="../Img/git-flow-commands-without-flow.png">
+    <img alt="Git" src="https://github.com/flyhigher139/Git-Cheat-Sheet/blob/master/Img/git-flow-commands-without-flow.png">
 </p>
 <hr>
 >>>>>>> copy
