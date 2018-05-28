@@ -19,8 +19,7 @@ Git cheat sheet saves you from learning all the commands by heart.
 Be free to contribute, update the grammar mistakes. You are also free to add your language file.
 <hr>
 
-Git Cheat Sheet Nepalese [N P](#N-P) <img src="https://github.com/Imsatis/GIt-Command/blob/master/nepgitcom/Flag-logo.svg"
-height="45" width="55">
+Git Cheat Sheet Nepalese [N P](#N-P) [![.](https://github.com/Imsatis/GIt-Command/blob/master/nepgitcom/Flag-logo.svg)](#)
 ===============
 ###अनुक्रमणिका
 * [सेटअप](#सेटअप-)
