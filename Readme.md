@@ -11,7 +11,7 @@
 
 [#####To intiliaze the the Local Repo](#To-intiliaze-the-the-Local-Repo)
 
-<p>1:) git init  #to initialize the .git track folder</p> 
+<p>1:) git init  #to initialize the .git track folder or to start tracking</p> 
 <hr>
 
 <p>2:) git status #use to check the status of the current Branch...</p>
