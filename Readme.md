@@ -58,5 +58,18 @@
 
 <p>22:) git push origin master #use to pushing the data from local Repo to Remote Repo.</p>
 
+
+create a new repository on the command line
+echo "# Menu-Project" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Imsatis/Menu-Project.git
+git push -u origin master
+
+push an existing repository from the command line
+git remote add origin https://github.com/Imsatis/Menu-Project.git
+git push -u origin master
+
 </body>
 </html>
