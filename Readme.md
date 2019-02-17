@@ -14,7 +14,7 @@
 <p>1:) git init  </p> 
 <hr>
 
-<p>2:) git status #use to check the status of the current Branch.</p>
+<p>2:) git status #use to check the status of the current Branch...</p>
 
 <p>3:) git add #is use for staging the files. </p>
          
